@@ -6,13 +6,13 @@ export PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
 echo ""
 
-echo "欢迎使用 V2ray.fun 管理程序"
+echo "欢迎使用 V2ray.Fun 管理程序"
 echo ""
 echo "1.服务管理"
 echo "2.更改配置"
 echo "3.查看服务端信息"
 echo "4.下载客户端配置文件"
-echo "5.更新v2ray和v2ray.fun"
+echo "5.更新 V2ray 和 V2ray.Fun"
 echo "请输入数字选择功能(按回车键退出)："
 
 while :; do echo
@@ -110,7 +110,7 @@ if [[ ${choice} == 2 ]]; then
         python /usr/local/v2ray.fun/en_dyn_port.py
 	    service v2ray restart
         echo ""
-        echo "更改动态端口成功！"
+        echo "更改 动态端口 成功！"
         bash /usr/local/bin/v2ray
     fi
     if [[ ${changechoice} == 7 ]]; then
@@ -118,7 +118,7 @@ if [[ ${choice} == 2 ]]; then
         python /usr/local/v2ray.fun/genclient.py
 	    service v2ray restart
         echo ""
-        echo "alterId修改成功！"
+        echo "alterId 修改成功！"
         bash /usr/local/bin/v2ray
     fi
     
@@ -127,7 +127,7 @@ if [[ ${choice} == 2 ]]; then
         python /usr/local/v2ray.fun/genclient.py
 	    service v2ray restart
         echo ""
-        echo "UUID修改成功！"
+        echo "UUID 修改成功！"
         bash /usr/local/bin/v2ray
     fi
     
@@ -137,7 +137,7 @@ if [[ ${choice} == 2 ]]; then
         python /usr/local/v2ray.fun/openport.py
 	    service v2ray restart
         echo ""
-        echo "端口修改成功！"
+        echo "端口 修改成功！"
         bash /usr/local/bin/v2ray
     fi
     
@@ -146,7 +146,7 @@ if [[ ${choice} == 2 ]]; then
         python /usr/local/v2ray.fun/genclient.py
 	    service v2ray restart
         echo ""
-        echo "加密方式修改成功！"
+        echo "加密方式 修改成功！"
         bash /usr/local/bin/v2ray
     fi
     
@@ -155,7 +155,7 @@ if [[ ${choice} == 2 ]]; then
         python /usr/local/v2ray.fun/genclient.py
 	    service v2ray restart
         echo ""
-        echo "传输模式修改成功！"
+        echo "传输模式 修改成功！"
         bash /usr/local/bin/v2ray
     fi
     
@@ -164,7 +164,7 @@ if [[ ${choice} == 2 ]]; then
         python /usr/local/v2ray.fun/genclient.py
 	    service v2ray restart
         echo ""
-        echo "TLS设置修改成功！"
+        echo "TLS 设置修改成功！"
         bash /usr/local/bin/v2ray
     fi
 
@@ -172,7 +172,7 @@ if [[ ${choice} == 2 ]]; then
         python /usr/local/v2ray.fun/changead.py
 	    service v2ray restart
         echo ""
-        echo "广告拦截功能设置成功！"
+        echo "广告拦截 设置成功！"
         bash /usr/local/bin/v2ray
     fi
 fi
@@ -184,20 +184,20 @@ fi
 
 if [[ ${choice} == 4 ]]; then
     python /usr/local/v2ray.fun/genclient.py && echo "保存成功！(/root/config.json)"
-    read -n1 -p  "是否通过sz来传输json配置文件(y/n)" ans
+    read -n1 -p  "是否通过 sz 来传输 JSON 配置文件(y/n)" ans
     if [[ ${ans} =~ [yY] ]]; then
         which sz 2>/dev/null && sz /root/config.json
     fi
     echo -e "\n"
     if [[ -f  "/root/config_v2rayN.png"  ]]; then
-        read -n1 -p  "是否通过sz来传输qrcode图片(v2rayN)(y/n)" ans
+        read -n1 -p  "是否通过 sz 来传输二维码图片？ (v2rayN)(y/n)" ans
         if [[ ${ans} =~ [yY] ]]; then
             which sz 2>/dev/null && sz /root/config_v2rayN.png
         fi
         echo -e "\n"
     fi
     if [[ -f  "/root/config_pepi.png"  ]]; then
-        read -n1 -p  "是否通过sz来传输qrcode图片(pepi)(y/n)" ans
+        read -n1 -p  "是否通过 sz 来传输二维码图片？ (Pepi)(y/n)" ans
         if [[ ${ans} =~ [yY] ]]; then
             which sz 2>/dev/null && sz /root/config_pepi.png
         fi
