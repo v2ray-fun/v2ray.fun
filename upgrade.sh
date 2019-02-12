@@ -28,7 +28,7 @@ fi
 # 重装V2ray.fun
 rm -rf /usr/local/v2ray.fun
 cd /usr/local/
-git clone https://github.com/tracyone/v2ray.fun
+git clone https://github.com/v2ray-fun/v2ray.fun
 cd /usr/local/v2ray.fun/
 chmod +x *.py
 
