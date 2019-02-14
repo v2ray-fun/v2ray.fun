@@ -29,7 +29,7 @@ while :; do echo
 done
 
 if [[ ${choice} == 5 ]]; then
-    bash -c "$(curl -fsSL https://git.io/vpOex)"
+    bash -c "$(curl -fsSL https://git.io/fhQ9Q)"
 fi
 if [[ ${choice} == 1 ]]; then
     echo "1.启动服务"
